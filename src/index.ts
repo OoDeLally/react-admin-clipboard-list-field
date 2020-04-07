@@ -1,1 +1,1 @@
-export { ObjectIdField } from './objectid-field';
+export { ClipboardListField } from './clipboard-list-field';

@@ -104,7 +104,7 @@ const Row = ({ text, iconPosition }: { text: string; iconPosition: IconPosition 
 type IconPosition = 'left' | 'right' | 'none';
 
 
-export const ObjectIdField = ({ record, source, quotes = '\'', iconPosition = 'right' }: {
+export const ClipboardListField = ({ record, source, quotes = '\'', iconPosition = 'right' }: {
   record?: any;
   source: string;
   quotes?: string;
@@ -128,7 +128,7 @@ export const ObjectIdField = ({ record, source, quotes = '\'', iconPosition = 'r
   );
 };
 
-ObjectIdField.propTypes = {
+ClipboardListField.propTypes = {
   record: PropTypes.object,
   source: PropTypes.string.isRequired,
   quotes: PropTypes.string,
@@ -136,4 +136,4 @@ ObjectIdField.propTypes = {
 };
 
 
-ObjectIdField.defaultProps = { addLabel: true };
+ClipboardListField.defaultProps = { addLabel: true };

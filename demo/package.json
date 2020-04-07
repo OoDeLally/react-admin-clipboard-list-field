@@ -1,8 +1,8 @@
 {
-  "name": "react-admin-objectid-field-demo",
+  "name": "react-admin-clipboard-list-field-demo",
   "version": "0.1.0",
   "dependencies": {
-    "react-admin-objectid-field": ".."
+    "react-admin-clipboard-list-field": ".."
   },
   "scripts": {
     "start": "react-scripts start",

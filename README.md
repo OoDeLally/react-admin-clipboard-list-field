@@ -1,28 +1,28 @@
 # React Admin
 
-Custom field for ObjectIds in [React Admin](https://github.com/marmelab/react-admin).
+Copy to clipboard in one click in [React Admin](https://github.com/marmelab/react-admin).
 
 
-![screenshot](https://github.com/OoDeLally/react-admin-objectid-field/blob/master/demo/react-admin-objectid-field.gif)
+![screenshot](https://github.com/OoDeLally/react-admin-clipboard-list-field/blob/master/demo/react-admin-clipboard-list-field.gif)
 
 
 
 ## Setup
 
 ```bash
-npm install --save react-admin-objectid-field
+npm install --save react-admin-clipboard-list-field
 ```
 
 
 ```ts
-import { ObjectIdField } from 'react-admin-objectid-field';
+import { ClipboardListField } from 'react-admin-clipboard-list-field';
 
 
 export const UserEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       ...
-      <ObjectIdField source="id" />
+      <ClipboardListField source="id" />
       ...
     </SimpleForm>
   </Edit>
@@ -35,5 +35,4 @@ export const UserEdit = (props) => (
 
 | name          | values                  |  Optional    | default | description                                                  |
 | --------------|-------------------------|--------------|---------|--------------------------------------------------------------|
-| `quotes`      | `'` `"`                 |  Optional    | `'`     | Type of quotes to use to display the `ObjectId('...')` row.  |
 | `iconPosition`| `left` `right` `none`   |  Optional    | `right` | Where the icon should be displayed in relation to the field. |

@@ -1,7 +1,7 @@
 {
-  "name": "react-admin-objectid-field",
+  "name": "react-admin-clipboard-list-field",
   "version": "0.1.0",
-  "description": "ObjectId field for React Admin",
+  "description": "Copy to clipboard in one click in React Admin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OoDeLally/react-admin-objectid-field.git"
+    "url": "git+https://github.com/OoDeLally/react-admin-clipboard-list-field.git"
   },
   "author": "Pascal Heitz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OoDeLally/react-admin-objectid-field/issues"
+    "url": "https://github.com/OoDeLally/react-admin-clipboard-list-field/issues"
   },
-  "homepage": "https://github.com/OoDeLally/react-admin-objectid-field#readme",
+  "homepage": "https://github.com/OoDeLally/react-admin-clipboard-list-field#readme",
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
