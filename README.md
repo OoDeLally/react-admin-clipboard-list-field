@@ -43,3 +43,15 @@ export const UserEdit = (props) => (
 | ---------------|-----------------------------|------------|---------|-------------------------------------------------|
 | `createRows`   | `(value: any) => string[]`  |            |         | Create the possible forms from the given value  |
 | `iconPosition` | `"left"` `"right"` `"none"` |  Optional  | `right` | Icon position in relation to the field.         |
+
+
+
+## Run the demo
+
+```bash
+
+git clone https://github.com/OoDeLally/react-admin-clipboard-list-field.git
+cd react-admin-clipboard-list-field
+npm run demo-install
+npm run demo
+```
