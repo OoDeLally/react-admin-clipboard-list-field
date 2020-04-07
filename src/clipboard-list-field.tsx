@@ -107,7 +107,7 @@ type IconPosition = 'left' | 'right' | 'none';
 export const ClipboardListField = ({ record, source, createRows, iconPosition = 'right' }: {
   record?: any;
   source: string;
-  createRows: (value: unknown) => string[];
+  createRows: (value: any) => string[];
   iconPosition?: IconPosition;
 }) => {
   const classes = useStyles();
