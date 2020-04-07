@@ -104,10 +104,10 @@ const Row = ({ text, iconPosition }: { text: string; iconPosition: IconPosition 
 type IconPosition = 'left' | 'right' | 'none';
 
 
-export const ClipboardListField = ({ record, source, quotes = '\'', iconPosition = 'right' }: {
+export const ClipboardListField = ({ record, source, createRows, iconPosition = 'right' }: {
   record?: any;
   source: string;
-  quotes?: string;
+  createRows: (value: unknown) => string[];
   iconPosition?: IconPosition;
 }) => {
   const classes = useStyles();
@@ -118,12 +118,31 @@ export const ClipboardListField = ({ record, source, quotes = '\'', iconPosition
   if (!id) {
     return null;
   }
+  const rows = createRows(id);
+  if (!Array.isArray(rows)) {
+    throw new Error(
+      `Prop 'createRows' should return an array of string. ` +
+      `Found ${JSON.stringify(rows)} for value ${JSON.stringify(id)}`
+    );
+  }
+  if (rows.length === 0) {
+    return null;
+  }
+  const [firstRow, ...otherRows] = rows;
   return (
     <div className={classes.field}>
-      <Row text={id} iconPosition={iconPosition} />
-      <div className={classNames(classes.hiddenMenu, classes.showOnHover)}>
-        <Row text={`ObjectId(${quotes}${id}${quotes})`} iconPosition={iconPosition} />
-      </div>
+      <Row text={firstRow} iconPosition={iconPosition} />
+      {
+        otherRows.length > 0 && (
+          <div className={classNames(classes.hiddenMenu, classes.showOnHover)}>
+            {
+              otherRows.map((text, textIndex) => (
+                <Row key={textIndex} text={text} iconPosition={iconPosition} />
+              ))
+            }
+          </div>
+        )
+      }
     </div>
   );
 };
@@ -131,7 +150,7 @@ export const ClipboardListField = ({ record, source, quotes = '\'', iconPosition
 ClipboardListField.propTypes = {
   record: PropTypes.object,
   source: PropTypes.string.isRequired,
-  quotes: PropTypes.string,
+  createRows: PropTypes.func.isRequired,
   iconPosition: PropTypes.string,
 };
 

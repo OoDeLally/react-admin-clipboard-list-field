@@ -12,17 +12,24 @@ export const UserList = props => (
 );
 
 
+const createRows = (value) => {
+  return [
+    value,
+    `ObjectId("${value})"`,
+  ];
+}
+
 
 const UserEditAside = (props) => (
   <SimpleShowLayout {...props}>
-    <ClipboardListField source="id" iconPosition="left" />
+    <ClipboardListField source="id" iconPosition="left" createRows={createRows} />
   </SimpleShowLayout>
 );
 
 export const UserEdit = (props) => (
   <Edit aside={<UserEditAside />} {...props}>
     <SimpleForm>
-      <ClipboardListField source="id" iconPosition="none" />
+      <ClipboardListField source="id" iconPosition="none" createRows={createRows} />
       <TextField source="nickname" />
       <TextInput source="nickname" />
       <TextInput source="email" />
