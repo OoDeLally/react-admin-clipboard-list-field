@@ -1,6 +1,6 @@
 # React Admin Clipboard List Field
 
-Copy various format of the same value to clipboard in one click in [React Admin](https://github.com/marmelab/react-admin).
+Copy various formats of the same value to clipboard in one click in [React Admin](https://github.com/marmelab/react-admin).
 
 
 ![screenshot](https://github.com/OoDeLally/react-admin-clipboard-list-field/blob/master/demo/react-admin-clipboard-list-field.gif)
@@ -39,10 +39,11 @@ export const UserEdit = (props) => (
 ## Props
 
 
-| Name           | Type                        |  Optional  | Default | Description                                     |
-| ---------------|-----------------------------|------------|---------|-------------------------------------------------|
-| `createRows`   | `(value: any) => string[]`  |            |         | Create the possible forms from the given value  |
-| `iconPosition` | `"left"` `"right"` `"none"` |  Optional  | `right` | Icon position in relation to the field.         |
+| Name           | Type                        |  Optional  | Default   | Description                                     |
+| ---------------|-----------------------------|------------|-----------|-------------------------------------------------|
+| `source`       | string                      |            |           | Value path, lodash `get()` style.               |
+| `createRows`   | `(value: any) => string[]`  |            |           | Create the possible forms from the given value. |
+| `iconPosition` | `"left"` `"right"` `"none"` |  Optional  | `"right"` | Icon position in relation to the field.         |
 
 
 
@@ -52,6 +53,7 @@ export const UserEdit = (props) => (
 
 git clone https://github.com/OoDeLally/react-admin-clipboard-list-field.git
 cd react-admin-clipboard-list-field
+npm install
 npm run demo-install
 npm run demo
 ```
