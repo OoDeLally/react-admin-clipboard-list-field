@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& button span': {
       overflow: 'hidden',
       textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
     },
   }
 }));
