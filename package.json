@@ -41,12 +41,12 @@
     "@types/react-copy-to-clipboard": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
-    "eslint": "^6.6.0",
+    "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
     "react-admin": "^3.4.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "typescript": "^3.8.3"
   },
   "browserslist": {
